@@ -28,11 +28,9 @@ export default function Hero() {
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <a
             href={RESTAURANT.orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[44px] items-center justify-center rounded-md bg-terracotta px-8 py-2.5 text-sm font-medium text-white transition-colors hover:bg-terracotta-dark sm:text-base"
           >
-            Order Online
+            Call to Order
           </a>
           <a
             href="#menu"

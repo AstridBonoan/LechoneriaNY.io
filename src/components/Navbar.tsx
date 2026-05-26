@@ -28,11 +28,9 @@ export default function Navbar() {
           <li>
             <a
               href={RESTAURANT.orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full bg-terracotta px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-terracotta-dark"
             >
-              Order Online
+              Call to Order
             </a>
           </li>
         </ul>
@@ -77,12 +75,10 @@ export default function Navbar() {
             <li className="pt-1">
               <a
                 href={RESTAURANT.orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="block rounded-full bg-terracotta px-5 py-2.5 text-center text-base font-medium text-white"
                 onClick={closeMenu}
               >
-                Order Online
+                Call to Order
               </a>
             </li>
           </ul>

@@ -17,16 +17,14 @@ export default function MenuPreview() {
             </h2>
             <p className="mt-2 max-w-xl text-sm text-brown-light sm:text-base">
               Traditional Colombian dishes for breakfast, lunch, and dinner.
-              Order online for pickup or delivery.
+              Call either location to order for pickup or delivery.
             </p>
           </div>
           <a
             href={RESTAURANT.menuUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-full bg-terracotta px-6 py-2.5 text-sm font-medium text-white hover:bg-terracotta-dark"
           >
-            View Full Menu
+            Browse Menu
           </a>
         </div>
 

@@ -17,8 +17,8 @@ export const RESTAURANT = {
   tagline: 'Authentic Colombian Food in Queens',
   subtext: 'Traditional flavors, homemade meals, and family-style dining',
   locationCount: '2 locations in New York',
-  orderUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
-  menuUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
+  orderUrl: '#locations',
+  menuUrl: '#menu',
   about: [
     'Lechoneria New York brings authentic Colombian home-style cooking to Queens — slow-roasted lechona, tamales, bandeja paisa, caldos, and antojitos made the traditional way.',
     'We serve generous portions in a casual, family-friendly setting. Dine in, take out, or order pickup and delivery from either of our two locations.',
@@ -29,11 +29,11 @@ export const RESTAURANT = {
 export const HIGHLIGHTS = [
   {
     title: 'Free Delivery',
-    description: 'Order online for delivery straight to your door.',
+    description: 'Call either location to place an order for delivery.',
   },
   {
     title: 'Pickup & Delivery',
-    description: 'Order from Queens or Jackson Heights online anytime.',
+    description: 'Call Queens or Jackson Heights to order anytime.',
   },
   {
     title: 'Outdoor Seating',
@@ -54,8 +54,6 @@ export const LOCATIONS = [
     fullAddress: '52-27 69th St, Queens, NY 11378',
     phone: '(718) 865-2346',
     phoneHref: 'tel:+17188652346',
-    orderUrl:
-      'https://www.lechonerianewyorkny.com/lechoneria-new-york/menu/52-27-69th-St/',
     mapsLink: 'https://maps.google.com/?q=52-27+69th+St,+Queens,+NY+11378',
     mapsEmbed:
       'https://maps.google.com/maps?q=52-27+69th+St,+Queens,+NY+11378&output=embed',
@@ -77,8 +75,6 @@ export const LOCATIONS = [
     fullAddress: '84-17 Northern Blvd, Jackson Heights, NY 11372',
     phone: '(646) 956-5024',
     phoneHref: 'tel:+16469565024',
-    orderUrl:
-      'https://www.lechonerianewyorkny.com/lechoneria-new-york/menu/84-17-Northern-Blvd/',
     mapsLink:
       'https://maps.google.com/?q=84-17+Northern+Blvd,+Jackson+Heights,+NY+11372',
     mapsEmbed:

@@ -14,11 +14,9 @@ export default function Footer() {
             </p>
             <a
               href={RESTAURANT.orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-3 inline-flex min-h-[40px] items-center rounded-md border border-beige/40 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10"
             >
-              Order Online
+              Call to Order
             </a>
           </div>
 

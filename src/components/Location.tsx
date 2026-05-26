@@ -14,12 +14,16 @@ export default function Location() {
           <h2 className="mt-1 text-2xl font-bold text-brown sm:text-3xl">
             Find us in Queens
           </h2>
+          <p className="mt-2 text-sm text-brown-light sm:text-base">
+            Call either location to place an order for pickup or delivery.
+          </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
           {LOCATIONS.map((location) => (
             <article
               key={location.id}
+              id={location.id}
               className="overflow-hidden rounded-xl border border-beige bg-cream shadow-sm"
             >
               <iframe
@@ -47,20 +51,16 @@ export default function Location() {
 
                 <div className="mt-3 flex gap-2">
                   <a
-                    href={location.orderUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={location.phoneHref}
                     className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-md bg-brown px-3 py-2 text-xs font-medium text-white hover:bg-brown-light sm:text-sm"
                   >
-                    Pickup
+                    Call for Pickup
                   </a>
                   <a
-                    href={location.orderUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={location.phoneHref}
                     className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-md bg-brown px-3 py-2 text-xs font-medium text-white hover:bg-brown-light sm:text-sm"
                   >
-                    Delivery
+                    Call for Delivery
                   </a>
                   <a
                     href={location.mapsLink}
