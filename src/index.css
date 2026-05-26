@@ -40,3 +40,20 @@ body {
   opacity: 1;
   transform: none;
 }
+
+.demo-watermark-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 84px; /* keep it under the sticky navbar */
+  opacity: 0.08;
+}
+
+.demo-watermark-img {
+  width: min(540px, 75vw);
+  height: auto;
+}
