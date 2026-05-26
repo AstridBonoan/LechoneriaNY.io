@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import InfoBar from './components/InfoBar'
+import Highlights from './components/Highlights'
 import About from './components/About'
 import MenuPreview from './components/MenuPreview'
-import SignatureDishes from './components/SignatureDishes'
 import Atmosphere from './components/Atmosphere'
 import Location from './components/Location'
 import Footer from './components/Footer'
@@ -13,9 +14,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <InfoBar />
+        <Highlights />
         <About />
         <MenuPreview />
-        <SignatureDishes />
         <Atmosphere />
         <Location />
       </main>

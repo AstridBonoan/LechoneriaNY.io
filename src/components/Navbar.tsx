@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { ASSETS, NAV_LINKS, RESTAURANT } from '../data/restaurant'
+import { NAV_LINKS, RESTAURANT } from '../data/restaurant'
+import Logo from './Logo'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -8,16 +9,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur-sm">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="#" className="flex items-center gap-3" onClick={closeMenu}>
-          <img
-            src={ASSETS.logo}
-            alt={RESTAURANT.name}
-            className="h-10 w-10 object-contain sm:h-11 sm:w-11"
-          />
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
+        <a href="#" className="flex items-center" onClick={closeMenu}>
+          <Logo className="h-9 w-9 object-contain sm:h-10 sm:w-10" />
         </a>
 
-        <ul className="hidden items-center gap-6 lg:flex">
+        <ul className="hidden items-center gap-5 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -33,7 +30,7 @@ export default function Navbar() {
               href={RESTAURANT.orderUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-terracotta px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-terracotta-dark"
+              className="rounded-full bg-terracotta px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-terracotta-dark"
             >
               Order Online
             </a>
@@ -42,7 +39,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-brown lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-brown lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
@@ -64,25 +61,25 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-beige bg-cream px-4 py-4 lg:hidden">
-          <ul className="flex flex-col gap-1">
+        <div className="border-t border-beige bg-cream px-4 py-3 lg:hidden">
+          <ul className="flex flex-col gap-0.5">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-brown transition-colors hover:bg-beige"
+                  className="block rounded-lg px-3 py-2.5 text-base font-medium text-brown transition-colors hover:bg-beige"
                   onClick={closeMenu}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
-            <li className="pt-2">
+            <li className="pt-1">
               <a
                 href={RESTAURANT.orderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-full bg-terracotta px-5 py-3 text-center text-base font-medium text-white"
+                className="block rounded-full bg-terracotta px-5 py-2.5 text-center text-base font-medium text-white"
                 onClick={closeMenu}
               >
                 Order Online

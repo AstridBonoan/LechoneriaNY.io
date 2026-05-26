@@ -5,69 +5,52 @@ export default function Location() {
   const ref = useFadeIn()
 
   return (
-    <section id="locations" className="py-16 sm:py-24" ref={ref}>
+    <section id="locations" className="bg-beige/50 py-10 sm:py-12" ref={ref}>
       <div className="fade-in-section mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center">
+        <div className="mb-6">
           <p className="text-sm font-medium uppercase tracking-wider text-terracotta">
             Locations
           </p>
-          <h2 className="mt-2 text-2xl font-bold text-brown sm:text-3xl">
-            Lechoneria New York locations
+          <h2 className="mt-1 text-2xl font-bold text-brown sm:text-3xl">
+            Find us in Queens
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {LOCATIONS.map((location) => (
             <article
               key={location.id}
-              className="rounded-2xl border border-beige bg-cream p-6 shadow-sm"
+              className="overflow-hidden rounded-xl border border-beige bg-cream shadow-sm"
             >
-              <div className="flex items-start gap-3">
-                <svg
-                  className="mt-1 h-5 w-5 shrink-0 text-terracotta"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                  aria-hidden="true"
+              <iframe
+                title={`${location.name} location map`}
+                src={location.mapsEmbed}
+                className="h-44 w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+
+              <div className="p-4">
+                <h3 className="text-base font-bold uppercase tracking-wide text-brown">
+                  {location.name}
+                </h3>
+                <address className="mt-1 not-italic text-sm text-brown-light">
+                  {location.fullAddress}
+                </address>
+                <a
+                  href={location.phoneHref}
+                  className="mt-1 inline-block text-sm font-medium text-terracotta hover:text-terracotta-dark"
                 >
-                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                </svg>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold uppercase tracking-wide text-brown">
-                    {location.name}
-                  </h3>
-                  <address className="mt-2 not-italic text-sm leading-relaxed text-brown-light">
-                    {location.address}
-                    <br />
-                    {location.city}
-                  </address>
-                  <a
-                    href={location.phoneHref}
-                    className="mt-2 inline-flex min-h-[44px] items-center text-sm font-medium text-terracotta hover:text-terracotta-dark"
-                  >
-                    {location.phone}
-                  </a>
-                </div>
-              </div>
+                  {location.phone}
+                </a>
 
-              <div className="mt-5 overflow-hidden rounded-xl">
-                <iframe
-                  title={`${location.name} location map`}
-                  src={location.mapsEmbed}
-                  className="h-48 w-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
-              </div>
-
-              <div className="mt-5">
-                <p className="text-sm font-semibold text-brown">Order Online:</p>
-                <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                <div className="mt-3 flex gap-2">
                   <a
                     href={location.orderUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md bg-brown px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brown-light"
+                    className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-md bg-brown px-3 py-2 text-xs font-medium text-white hover:bg-brown-light sm:text-sm"
                   >
                     Pickup
                   </a>
@@ -75,39 +58,32 @@ export default function Location() {
                     href={location.orderUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md bg-brown px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brown-light"
+                    className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-md bg-brown px-3 py-2 text-xs font-medium text-white hover:bg-brown-light sm:text-sm"
                   >
                     Delivery
                   </a>
+                  <a
+                    href={location.mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-md border border-beige px-3 py-2 text-xs font-medium text-brown hover:bg-beige sm:text-sm"
+                  >
+                    Directions
+                  </a>
                 </div>
-              </div>
 
-              <div className="mt-5">
-                <p className="text-sm font-semibold text-brown">Hours</p>
-                <ul className="mt-2 space-y-1">
+                <ul className="mt-3 space-y-0.5 border-t border-beige pt-3">
                   {location.hours.map((entry) => (
                     <li
                       key={entry.days}
-                      className="flex justify-between gap-4 text-xs text-brown-light sm:text-sm"
+                      className="flex justify-between gap-3 text-xs text-brown-light sm:text-sm"
                     >
-                      <span>{entry.days}</span>
+                      <span className="font-medium text-brown">{entry.days}</span>
                       <span>{entry.time}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-2 text-xs text-brown-light/70">
-                  Hours may vary by location.
-                </p>
               </div>
-
-              <a
-                href={location.mapsLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-medium text-terracotta hover:text-terracotta-dark"
-              >
-                Get Directions →
-              </a>
             </article>
           ))}
         </div>

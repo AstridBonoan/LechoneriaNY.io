@@ -19,7 +19,31 @@ export const RESTAURANT = {
   locationCount: '2 locations in New York',
   orderUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
   menuUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
+  about: [
+    'Lechoneria New York brings authentic Colombian home-style cooking to Queens — slow-roasted lechona, tamales, bandeja paisa, caldos, and antojitos made the traditional way.',
+    'We serve generous portions in a casual, family-friendly setting. Dine in, take out, or order pickup and delivery from either of our two locations.',
+    'Free delivery available. Outdoor seating at our Queens location. Open daily for breakfast, lunch, and dinner.',
+  ],
 }
+
+export const HIGHLIGHTS = [
+  {
+    title: 'Free Delivery',
+    description: 'Order online for delivery straight to your door.',
+  },
+  {
+    title: 'Pickup & Delivery',
+    description: 'Order from Queens or Jackson Heights online anytime.',
+  },
+  {
+    title: 'Outdoor Seating',
+    description: 'Casual patio dining at our Queens location.',
+  },
+  {
+    title: 'Family Portions',
+    description: 'Hearty Colombian plates made for sharing.',
+  },
+]
 
 export const LOCATIONS = [
   {
@@ -93,28 +117,33 @@ export const POPULAR_ITEMS = [
 export const MENU_CATEGORIES = [
   {
     title: 'Typical Dishes',
-    description: 'Lechona, tamales, bandeja paisa — Colombian classics made fresh daily.',
+    description: 'Lechona, tamales, bandeja paisa, sancocho, and ajiaco.',
+    items: 'Lechona Colombiana · Tamal Tolimense · Bandeja Paisa · Picada',
     image: ASSETS.lechona,
   },
   {
     title: 'Breakfast & Lunch',
-    description: 'Caldo de costilla, calentado paisa, and hearty morning favorites.',
+    description: 'Caldo de costilla, calentado paisa, huevos, and arepas.',
+    items: 'Caldo de Costilla · Calentado Paisa · Arepa de Maíz · Chicharrón',
     image: ASSETS.foodSpread,
   },
   {
     title: 'Antojitos',
-    description: 'Arepas, empanadas, chicharrón, and choripapas for sharing.',
+    description: 'Arepas, empanadas, chicharrón, choripapas, and patacones.',
+    items: 'Arepas · Empanadas · Chicharrón · Choripapas · Patacones',
     image: ASSETS.picada,
   },
   {
     title: 'Desserts',
-    description: 'Arroz con leche, cheesecake, and sweet Colombian treats.',
-    image: ASSETS.foodSpread,
+    description: 'Arroz con leche, tres leches, cheesecake, and flan.',
+    items: 'Arroz con Leche · Tres Leches · Cheesecake · Flan',
+    image: ASSETS.lechona,
   },
   {
     title: 'Drinks',
-    description: 'Fresh jugos, limonadas, and Colombian sodas.',
-    image: ASSETS.picada,
+    description: 'Fresh jugos, limonadas, café, and Colombian sodas.',
+    items: 'Jugos Naturales · Limonada · Lulada · Postobón · Café',
+    image: ASSETS.foodSpread,
   },
 ]
 
