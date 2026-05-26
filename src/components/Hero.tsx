@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-brown/70" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-10 text-center sm:px-6 sm:py-14">
-        <Logo className="mb-4 h-24 w-24 object-contain sm:h-32 sm:w-32" />
+        <Logo className="mb-5 h-36 w-36 sm:h-44 sm:w-44 md:h-52 md:w-52" />
 
         <h1 className="text-2xl font-bold text-white sm:text-3xl">
           {RESTAURANT.welcome}

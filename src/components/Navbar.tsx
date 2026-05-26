@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur-sm">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <a href="#" className="flex items-center" onClick={closeMenu}>
-          <Logo className="h-9 w-9 object-contain sm:h-10 sm:w-10" />
+          <Logo className="h-14 w-14 sm:h-16 sm:w-16" />
         </a>
 
         <ul className="hidden items-center gap-5 lg:flex">

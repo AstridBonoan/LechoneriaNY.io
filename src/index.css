@@ -35,13 +35,8 @@ body {
   animation: fade-in-up 0.6s ease-out forwards;
 }
 
+/* Sections always visible — fade-in was hiding content due to observer mismatch */
 .fade-in-section {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-section.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }

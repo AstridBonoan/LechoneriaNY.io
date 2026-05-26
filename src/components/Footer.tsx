@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Logo className="mb-3 h-14 w-14 object-contain" />
+            <Logo className="mb-3 h-20 w-20" />
             <p className="text-sm text-beige/80">
               Authentic Colombian cuisine in Queens. Two locations, open daily.
             </p>
