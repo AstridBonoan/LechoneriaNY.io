@@ -1,3 +1,4 @@
+import { ASSETS, RESTAURANT } from '../data/restaurant'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 export default function About() {
@@ -6,43 +7,38 @@ export default function About() {
   return (
     <section id="about" className="py-16 sm:py-24" ref={ref}>
       <div className="fade-in-section mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-wider text-terracotta">
-              Our Story
-            </p>
-            <h2 className="mt-2 text-2xl font-bold text-brown sm:text-3xl">
-              Colombian home-style cooking in Queens
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-brown-light">
-              <p>
-                Lechoneria New York is a family-friendly neighborhood restaurant
-                serving authentic Colombian food the way it&apos;s made at home —
-                generous portions, traditional recipes, and flavors you&apos;ll
-                recognize if you grew up with them.
-              </p>
-              <p>
-                From slow-roasted lechona and tamales to a full bandeja paisa,
-                every dish is prepared with care. Whether you&apos;re stopping
-                in for breakfast, grabbing lunch, or sharing a meal with family,
-                you&apos;re always welcome here.
-              </p>
-              <p>
-                Located in Maspeth, Queens — a casual spot where locals come
-                for real Colombian comfort food.
-              </p>
-            </div>
-          </div>
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-brown sm:text-3xl">
+            {RESTAURANT.welcome}
+          </h2>
+          <div className="mx-auto mt-3 h-0.5 w-12 bg-brown" aria-hidden="true" />
+          <p className="mt-3 text-lg text-brown-light">{RESTAURANT.subtitle}</p>
+        </div>
 
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6">
           <div className="overflow-hidden rounded-2xl">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&h=500&fit=crop"
-              alt="Family-style dining at a casual restaurant"
-              className="h-64 w-full object-cover sm:h-80"
+              src={ASSETS.food1}
+              alt="Lechona Colombiana with arepa on a plate"
+              className="aspect-[4/3] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={ASSETS.food2}
+              alt="Lechona takeout with arepa and crispy pork skin"
+              className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />
           </div>
         </div>
+
+        <p className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-brown-light">
+          Colombian home-style cooking with traditional dishes like lechona,
+          tamales, and bandeja paisa. A family-friendly neighborhood restaurant
+          serving Queens with authentic flavors and generous portions.
+        </p>
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-import { SIGNATURE_DISHES } from '../data/restaurant'
+import { POPULAR_ITEMS } from '../data/restaurant'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 export default function SignatureDishes() {
@@ -9,21 +9,18 @@ export default function SignatureDishes() {
       <div className="fade-in-section mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-terracotta">
-            Favorites
+            Menu
           </p>
           <h2 className="mt-2 text-2xl font-bold text-brown sm:text-3xl">
-            Signature dishes
+            Popular items
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-brown-light">
-            Customer favorites and Colombian classics you have to try.
-          </p>
         </div>
 
-        <div className="mt-10 -mx-4 flex gap-4 overflow-x-auto px-4 pb-4 snap-x snap-mandatory sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 xl:grid-cols-5">
-          {SIGNATURE_DISHES.map((dish) => (
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {POPULAR_ITEMS.map((dish) => (
             <article
               key={dish.name}
-              className="w-72 shrink-0 snap-start overflow-hidden rounded-2xl bg-cream shadow-sm sm:w-auto"
+              className="overflow-hidden rounded-2xl bg-cream shadow-sm"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -33,8 +30,8 @@ export default function SignatureDishes() {
                   loading="lazy"
                 />
               </div>
-              <div className="p-4">
-                <div className="flex items-start justify-between gap-2">
+              <div className="p-5">
+                <div className="flex items-start justify-between gap-3">
                   <h3 className="font-semibold text-brown">{dish.name}</h3>
                   <span className="shrink-0 text-sm font-medium text-gold">
                     {dish.price}

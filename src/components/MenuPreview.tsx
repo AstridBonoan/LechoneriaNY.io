@@ -1,4 +1,4 @@
-import { MENU_CATEGORIES, RESTAURANT } from '../data/restaurant'
+import { RESTAURANT, MENU_CATEGORIES } from '../data/restaurant'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 export default function MenuPreview() {
@@ -40,7 +40,7 @@ export default function MenuPreview() {
                   {category.description}
                 </p>
                 <a
-                  href={RESTAURANT.orderUrl}
+                  href={RESTAURANT.menuUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex min-h-[44px] items-center text-sm font-medium text-terracotta transition-colors hover:text-terracotta-dark"

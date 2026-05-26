@@ -1,44 +1,106 @@
+export const ASSETS = {
+  logo: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-4hfdnzyx-logo.png',
+  banner: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-rtdg2pcj-banner.jpg',
+  food1: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-5lkzsdb3-food1.jpg',
+  food2: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-l9s48xrc-food2.jpg',
+  food3: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-q58clhbr-food3.jpg',
+}
+
 export const RESTAURANT = {
   name: 'Lechoneria New York',
+  welcome: 'Welcome to Lechoneria New York',
+  subtitle: 'Colombian Restaurant',
   tagline: 'Authentic Colombian Food in Queens',
   subtext: 'Traditional flavors, homemade meals, and family-style dining',
-  phone: '(347) 642-3025',
-  phoneHref: 'tel:+13476423025',
-  address: '52-27 69th St',
-  city: 'Maspeth, Queens, NY 11378',
-  fullAddress: '52-27 69th St, Maspeth, Queens, NY 11378',
-  rating: '3.3',
-  cuisine: 'Colombian',
-  orderUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/menu/52-27-69th-St/',
-  mapsEmbed:
-    'https://maps.google.com/maps?q=52-27+69th+St,+Maspeth,+NY+11378&output=embed',
-  mapsLink:
-    'https://maps.google.com/?q=52-27+69th+St,+Maspeth,+NY+11378',
-  hours: [
-    { days: 'Sunday', time: '8:00 AM – 9:00 PM' },
-    { days: 'Monday – Thursday', time: '9:00 AM – 9:00 PM' },
-    { days: 'Friday – Saturday', time: '8:00 AM – 10:00 PM' },
-  ],
+  locationCount: '2 locations in New York',
+  orderUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
+  menuUrl: 'https://www.lechonerianewyorkny.com/lechoneria-new-york/',
 }
+
+export const LOCATIONS = [
+  {
+    id: 'queens',
+    name: 'Queens',
+    address: '52-27 69th St',
+    city: 'Queens, NY 11378',
+    fullAddress: '52-27 69th St, Queens, NY 11378',
+    phone: '(718) 865-2346',
+    phoneHref: 'tel:+17188652346',
+    orderUrl:
+      'https://www.lechonerianewyorkny.com/lechoneria-new-york/menu/52-27-69th-St/',
+    mapsLink: 'https://maps.google.com/?q=52-27+69th+St,+Queens,+NY+11378',
+    mapsEmbed:
+      'https://maps.google.com/maps?q=52-27+69th+St,+Queens,+NY+11378&output=embed',
+    hours: [
+      { days: 'Sunday', time: '8:00 AM – 9:00 PM' },
+      { days: 'Monday', time: '9:00 AM – 9:00 PM' },
+      { days: 'Tuesday', time: '9:00 AM – 9:00 PM' },
+      { days: 'Wednesday', time: '9:00 AM – 9:00 PM' },
+      { days: 'Thursday', time: '9:00 AM – 9:00 PM' },
+      { days: 'Friday', time: '8:00 AM – 10:00 PM' },
+      { days: 'Saturday', time: '8:00 AM – 10:00 PM' },
+    ],
+  },
+  {
+    id: 'jackson-heights',
+    name: 'Jackson Heights',
+    address: '84-17 Northern Blvd',
+    city: 'Jackson Heights, NY 11372',
+    fullAddress: '84-17 Northern Blvd, Jackson Heights, NY 11372',
+    phone: '(646) 956-5024',
+    phoneHref: 'tel:+16469565024',
+    orderUrl:
+      'https://www.lechonerianewyorkny.com/lechoneria-new-york/menu/84-17-Northern-Blvd/',
+    mapsLink:
+      'https://maps.google.com/?q=84-17+Northern+Blvd,+Jackson+Heights,+NY+11372',
+    mapsEmbed:
+      'https://maps.google.com/maps?q=84-17+Northern+Blvd,+Jackson+Heights,+NY+11372&output=embed',
+    hours: [
+      { days: 'Sunday – Thursday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Friday – Saturday', time: '9:00 AM – 12:00 AM' },
+    ],
+  },
+]
+
+export const POPULAR_ITEMS = [
+  {
+    name: 'Lechona Colombiana',
+    price: '$13.47',
+    description:
+      'Mezcla horneada de arroz, arbeja y cerdo, acompañado de cuero crocante y arepa.',
+    image: ASSETS.food1,
+  },
+  {
+    name: 'Tamal Tolimense',
+    price: '$13.47',
+    description:
+      'Mezcla de harina de maiz, arroz, pollo, costilla de cerdo, huevo, tocino, papa, zanahoria.',
+    image: ASSETS.food2,
+  },
+  {
+    name: 'Picada para (2) Personas',
+    price: '$29.93',
+    description:
+      'Carne asada, pechuga asada, chorizo, morcilla, costillas de cerdo, papa criolla, maduro y arepa blanca.',
+    image: ASSETS.food3,
+  },
+]
 
 export const MENU_CATEGORIES = [
   {
     title: 'Typical Dishes',
     description: 'Lechona, tamales, bandeja paisa — Colombian classics made fresh daily.',
-    image:
-      'https://images.unsplash.com/photo-1594040226829-7f251665c8d2?w=600&h=400&fit=crop',
+    image: ASSETS.food1,
   },
   {
     title: 'Breakfast & Lunch',
     description: 'Caldo de costilla, calentado paisa, and hearty morning favorites.',
-    image:
-      'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&h=400&fit=crop',
+    image: ASSETS.food3,
   },
   {
     title: 'Antojitos',
     description: 'Arepas, empanadas, chicharrón, and choripapas for sharing.',
-    image:
-      'https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=600&h=400&fit=crop',
+    image: ASSETS.food2,
   },
   {
     title: 'Desserts',
@@ -54,64 +116,14 @@ export const MENU_CATEGORIES = [
   },
 ]
 
-export const SIGNATURE_DISHES = [
-  {
-    name: 'Lechona Colombiana',
-    description: 'Slow-roasted pork with rice, peas, crispy skin, and arepa.',
-    price: '$13.47',
-    image:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=350&fit=crop',
-  },
-  {
-    name: 'Bandeja Paisa',
-    description: 'A hearty platter with beans, rice, chicharrón, egg, and more.',
-    price: '$16.99',
-    image:
-      'https://images.unsplash.com/photo-1594040226829-7f251665c8d2?w=500&h=350&fit=crop',
-  },
-  {
-    name: 'Tamal Tolimense',
-    description: 'Corn masa filled with chicken, pork rib, egg, and vegetables.',
-    price: '$13.47',
-    image:
-      'https://images.unsplash.com/photo-1582169292940-452f205a5e2d?w=500&h=350&fit=crop',
-  },
-  {
-    name: 'Chicharrón',
-    description: 'Golden, crispy fried pork belly — a Colombian favorite.',
-    price: '$8.99',
-    image:
-      'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=500&h=350&fit=crop',
-  },
-  {
-    name: 'Arepa de Maíz con Carne',
-    description: 'Griddled corn arepa topped with seasoned shredded beef.',
-    price: '$9.99',
-    image:
-      'https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=500&h=350&fit=crop',
-  },
-]
-
 export const GALLERY_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=450&fit=crop',
-    alt: 'Colombian roasted pork dish close-up',
-  },
+  { src: ASSETS.food1, alt: 'Lechona Colombiana with arepa' },
+  { src: ASSETS.food2, alt: 'Tamal Tolimense takeout' },
+  { src: ASSETS.food3, alt: 'Colombian picada platter' },
+  { src: ASSETS.banner, alt: 'Lechoneria New York food spread' },
   {
     src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=450&fit=crop',
     alt: 'Casual family dining atmosphere',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=600&h=450&fit=crop',
-    alt: 'Arepas and appetizers on a table',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=450&fit=crop',
-    alt: 'Warm restaurant interior',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&h=450&fit=crop',
-    alt: 'Hearty Colombian lunch plate',
   },
   {
     src: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&h=450&fit=crop',
@@ -120,8 +132,14 @@ export const GALLERY_IMAGES = [
 ]
 
 export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '#' },
+  { label: 'Locations', href: '#locations' },
+  { label: 'Contact', href: '#contact' },
   { label: 'Menu', href: '#menu' },
-  { label: 'Dishes', href: '#dishes' },
-  { label: 'Visit', href: '#visit' },
+]
+
+export const SOCIAL_LINKS = [
+  { label: 'Facebook', href: '#' },
+  { label: 'Twitter', href: '#' },
+  { label: 'Instagram', href: '#' },
 ]

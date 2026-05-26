@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NAV_LINKS, RESTAURANT } from '../data/restaurant'
+import { ASSETS, NAV_LINKS, RESTAURANT } from '../data/restaurant'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -9,15 +9,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a
-          href="#"
-          className="text-lg font-semibold text-brown sm:text-xl"
-          onClick={closeMenu}
-        >
-          {RESTAURANT.name}
+        <a href="#" className="flex items-center gap-3" onClick={closeMenu}>
+          <img
+            src={ASSETS.logo}
+            alt={RESTAURANT.name}
+            className="h-10 w-auto sm:h-11"
+          />
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -30,17 +30,19 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href={RESTAURANT.phoneHref}
+              href={RESTAURANT.orderUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-terracotta px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-terracotta-dark"
             >
-              Call Now
+              Order Online
             </a>
           </li>
         </ul>
 
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-brown md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-brown lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
@@ -62,7 +64,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-beige bg-cream px-4 py-4 md:hidden">
+        <div className="border-t border-beige bg-cream px-4 py-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
@@ -77,11 +79,13 @@ export default function Navbar() {
             ))}
             <li className="pt-2">
               <a
-                href={RESTAURANT.phoneHref}
+                href={RESTAURANT.orderUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block rounded-full bg-terracotta px-5 py-3 text-center text-base font-medium text-white"
                 onClick={closeMenu}
               >
-                Call Now
+                Order Online
               </a>
             </li>
           </ul>
