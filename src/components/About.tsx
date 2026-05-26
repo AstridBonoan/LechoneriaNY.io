@@ -18,7 +18,7 @@ export default function About() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6">
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={ASSETS.food1}
+              src={ASSETS.lechona}
               alt="Lechona Colombiana with arepa on a plate"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
@@ -26,8 +26,8 @@ export default function About() {
           </div>
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={ASSETS.food2}
-              alt="Lechona takeout with arepa and crispy pork skin"
+              src={ASSETS.picada}
+              alt="Picada platter with grilled meats and sides"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />

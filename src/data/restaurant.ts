@@ -1,9 +1,13 @@
+const BASE = import.meta.env.BASE_URL
+
 export const ASSETS = {
-  logo: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-4hfdnzyx-logo.png',
-  banner: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-rtdg2pcj-banner.jpg',
-  food1: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-5lkzsdb3-food1.jpg',
-  food2: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-l9s48xrc-food2.jpg',
-  food3: 'https://d2gqo3h0psesgi.cloudfront.net/auto/lechoneria-new-york-q58clhbr-food3.jpg',
+  logo: `${BASE}images/logo.png`,
+  hero: `${BASE}images/food-spread.png`,
+  lechona: `${BASE}images/lechona.png`,
+  picada: `${BASE}images/picada-platter.png`,
+  foodSpread: `${BASE}images/food-spread.png`,
+  storefrontPatio: `${BASE}images/storefront-patio.png`,
+  storefrontFlag: `${BASE}images/storefront-flag.png`,
 }
 
 export const RESTAURANT = {
@@ -68,21 +72,21 @@ export const POPULAR_ITEMS = [
     price: '$13.47',
     description:
       'Mezcla horneada de arroz, arbeja y cerdo, acompañado de cuero crocante y arepa.',
-    image: ASSETS.food1,
+    image: ASSETS.lechona,
   },
   {
     name: 'Tamal Tolimense',
     price: '$13.47',
     description:
       'Mezcla de harina de maiz, arroz, pollo, costilla de cerdo, huevo, tocino, papa, zanahoria.',
-    image: ASSETS.food2,
+    image: ASSETS.foodSpread,
   },
   {
     name: 'Picada para (2) Personas',
     price: '$29.93',
     description:
       'Carne asada, pechuga asada, chorizo, morcilla, costillas de cerdo, papa criolla, maduro y arepa blanca.',
-    image: ASSETS.food3,
+    image: ASSETS.picada,
   },
 ]
 
@@ -90,45 +94,36 @@ export const MENU_CATEGORIES = [
   {
     title: 'Typical Dishes',
     description: 'Lechona, tamales, bandeja paisa — Colombian classics made fresh daily.',
-    image: ASSETS.food1,
+    image: ASSETS.lechona,
   },
   {
     title: 'Breakfast & Lunch',
     description: 'Caldo de costilla, calentado paisa, and hearty morning favorites.',
-    image: ASSETS.food3,
+    image: ASSETS.foodSpread,
   },
   {
     title: 'Antojitos',
     description: 'Arepas, empanadas, chicharrón, and choripapas for sharing.',
-    image: ASSETS.food2,
+    image: ASSETS.picada,
   },
   {
     title: 'Desserts',
     description: 'Arroz con leche, cheesecake, and sweet Colombian treats.',
-    image:
-      'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=400&fit=crop',
+    image: ASSETS.foodSpread,
   },
   {
     title: 'Drinks',
     description: 'Fresh jugos, limonadas, and Colombian sodas.',
-    image:
-      'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&h=400&fit=crop',
+    image: ASSETS.picada,
   },
 ]
 
 export const GALLERY_IMAGES = [
-  { src: ASSETS.food1, alt: 'Lechona Colombiana with arepa' },
-  { src: ASSETS.food2, alt: 'Tamal Tolimense takeout' },
-  { src: ASSETS.food3, alt: 'Colombian picada platter' },
-  { src: ASSETS.banner, alt: 'Lechoneria New York food spread' },
-  {
-    src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=450&fit=crop',
-    alt: 'Casual family dining atmosphere',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&h=450&fit=crop',
-    alt: 'Fresh tropical juice drinks',
-  },
+  { src: ASSETS.lechona, alt: 'Lechona Colombiana with crispy pork skin and arepa' },
+  { src: ASSETS.foodSpread, alt: 'Traditional Colombian dishes spread' },
+  { src: ASSETS.picada, alt: 'Picada platter with grilled meats and sides' },
+  { src: ASSETS.storefrontPatio, alt: 'Lechoneria NY storefront with outdoor patio' },
+  { src: ASSETS.storefrontFlag, alt: 'Lechoneria NY entrance with Colombian flag' },
 ]
 
 export const NAV_LINKS = [

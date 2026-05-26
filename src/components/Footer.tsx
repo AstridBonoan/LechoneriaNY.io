@@ -10,7 +10,7 @@ export default function Footer() {
             <img
               src={ASSETS.logo}
               alt={RESTAURANT.name}
-              className="mb-4 h-14 w-auto"
+              className="mb-4 h-16 w-16 object-contain"
             />
             <a
               href={RESTAURANT.orderUrl}

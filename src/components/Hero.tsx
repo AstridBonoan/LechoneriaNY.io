@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[70vh] sm:min-h-[80vh]">
       <img
-        src={ASSETS.banner}
+        src={ASSETS.hero}
         alt="Colombian food at Lechoneria New York"
         className="absolute inset-0 h-full w-full object-cover"
         fetchPriority="high"
@@ -16,7 +16,7 @@ export default function Hero() {
         <img
           src={ASSETS.logo}
           alt={RESTAURANT.name}
-          className="mb-6 h-28 w-auto sm:h-36 md:h-44"
+          className="mb-6 h-32 w-32 object-contain sm:h-40 sm:w-40 md:h-48 md:w-48"
         />
 
         <h1 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">

@@ -13,7 +13,7 @@ export default function Navbar() {
           <img
             src={ASSETS.logo}
             alt={RESTAURANT.name}
-            className="h-10 w-auto sm:h-11"
+            className="h-10 w-10 object-contain sm:h-11 sm:w-11"
           />
         </a>
 
