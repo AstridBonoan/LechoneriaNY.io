@@ -80,8 +80,13 @@ export const LOCATIONS = [
     mapsEmbed:
       'https://maps.google.com/maps?q=84-17+Northern+Blvd,+Jackson+Heights,+NY+11372&output=embed',
     hours: [
-      { days: 'Sunday – Thursday', time: '9:00 AM – 10:00 PM' },
-      { days: 'Friday – Saturday', time: '9:00 AM – 12:00 AM' },
+      { days: 'Sunday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Monday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Tuesday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Wednesday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Thursday', time: '9:00 AM – 10:00 PM' },
+      { days: 'Friday', time: '9:00 AM – 12:00 AM' },
+      { days: 'Saturday', time: '9:00 AM – 12:00 AM' },
     ],
   },
 ]
